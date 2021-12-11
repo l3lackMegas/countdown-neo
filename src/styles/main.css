@@ -6,6 +6,11 @@ body,
   padding: 0;
 }
 
-html.dark {
-  background: #121212;
+/* UnoCSS does not use @apply directive. */
+html {
+  background: #eff6ff;
 }
+html.dark {
+  background: #0f172a;
+}
+
