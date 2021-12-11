@@ -1,22 +1,17 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
-import Counter from '../src/components/Counter.vue'
+import { describe, it, expect, sinon } from 'vitest'
+import NewYear from '../components/NewYear.vue'
 
-describe('Counter.vue', () => {
-  it('should render', () => {
-    const wrapper = mount(Counter, { props: { initial: 10 } })
-    expect(wrapper.text()).toContain('10')
-    expect(wrapper.html()).toMatchSnapshot()
+describe('NewYear.vue', () => {
+  it('display happy new year when it is new year', () => {
+    const clock = sinon.useFakeTimers(new Date('1/1/2021'))
+    const wrapper = mount(NewYear)
+    expect(wrapper.text()).toContain('Happy New Year 2021')
+    clock.restore()
   })
-
-  it('should be interactive', async() => {
-    const wrapper = mount(Counter, { props: { initial: 0 } })
-    expect(wrapper.text()).toContain('0')
-
-    expect(wrapper.find('.inc').exists()).toBe(true)
-
-    await wrapper.get('button').trigger('click')
-
-    expect(wrapper.text()).toContain('1')
+  it('display countdown text when it is not new year', () => {
+    const clock = sinon.useFakeTimers(new Date('2/2/2021'))
+    const wrapper = mount(NewYear)
+    expect(wrapper.text()).toContain('New Year 2022 Countdown')
   })
 })
