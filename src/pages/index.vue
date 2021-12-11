@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <h1 class="text-5xl font-sans font-bold">
+    <h1 class="text-5xl font-sans font-bold" text="blue-gray-800 dark:blue-gray-50">
       New Year 2021 Countdown
     </h1>
     <div>
