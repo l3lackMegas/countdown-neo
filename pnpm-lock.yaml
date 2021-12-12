@@ -9,6 +9,7 @@ specifiers:
   '@vue/test-utils': ^2.0.0-rc.17
   '@vueuse/core': ^7.2.2
   eslint: ^8.4.1
+  particles.vue3: ^1.20.5
   pnpm: ^6.23.6
   typescript: ^4.5.3
   unocss: ^0.15.6
@@ -22,6 +23,7 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 7.2.2_vue@3.2.24
+  particles.vue3: 1.20.5_vue@3.2.24
   vue: 3.2.24
   vue-router: 4.0.12_vue@3.2.24
 
@@ -1623,6 +1625,11 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
+
+  /core-js/3.19.3:
+    resolution: {integrity: sha512-LeLBMgEGSsG7giquSzvgBrTS7V5UL6ks3eQlUSbN8dJStlLFiRzUm5iqsRyzUB8carhfKjkJ2vzKqE6z1Vga9g==}
+    requiresBuild: true
+    dev: false
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -3965,6 +3972,17 @@ packages:
     resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
     dev: true
 
+  /particles.vue3/1.20.5_vue@3.2.24:
+    resolution: {integrity: sha512-nH3XKBhoBGbCv2HbDrezmah4i4WPYQ+MCgfwvouPAspEl8WfdScSmNE4Bqk9VOuYMc1kUCNMe1fShUSNTNJwBw==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      core-js: 3.19.3
+      tsparticles: 1.37.5
+      vue: 3.2.24
+      vue-class-component: 8.0.0-rc.1_vue@3.2.24
+    dev: false
+
   /path-exists/3.0.0:
     resolution: {integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=}
     engines: {node: '>=4'}
@@ -4661,6 +4679,11 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tsparticles/1.37.5:
+    resolution: {integrity: sha512-BQBRnnKKhKH2POwxuHzPiuL/zPUjuR5QmMCFQ2vm3fadE2k4vqmH099m1R9R+nt0lTvWL6SCS0hYQQkqUjsMXg==}
+    requiresBuild: true
+    dev: false
+
   /tsutils/3.21.0_typescript@4.5.3:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -4942,6 +4965,14 @@ packages:
       - utf-8-validate
       - zen-observable
     dev: true
+
+  /vue-class-component/8.0.0-rc.1_vue@3.2.24:
+    resolution: {integrity: sha512-w1nMzsT/UdbDAXKqhwTmSoyuJzUXKrxLE77PCFVuC6syr8acdFDAq116xgvZh9UCuV0h+rlCtxXolr3Hi3HyPQ==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.2.24
+    dev: false
 
   /vue-demi/0.12.1_vue@3.2.24:
     resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
