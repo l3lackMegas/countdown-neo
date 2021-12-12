@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// import { useFakeTimers } from 'sinon'
+import { useCountdown } from '~/composables'
+// This is for mocking
+// const clock = useFakeTimers({ now: new Date(2021, 0, 1, 23, 59, 55), shouldAdvanceTime: true })
 const now = useNow()
 const currentYear = computed(() => now.value.getFullYear())
 const isNewYearDay = computed(() => {
@@ -6,6 +10,7 @@ const isNewYearDay = computed(() => {
   const currentDay = now.value.getDate() // 1 = 1 just like normal people
   return currentMonth === 0 && currentDay === 1
 })
+const countDownInfo = useCountdown(0, 1)
 </script>
 
 <template>
@@ -18,6 +23,14 @@ const isNewYearDay = computed(() => {
     </template>
   </h1>
   <div>
-    <span class="text-4xl">23:12:00</span>
+    <div v-if="!isNewYearDay" class="text-4xl">
+      {{ countDownInfo.days }} Days
+      {{ countDownInfo.hours }} Hours
+      {{ countDownInfo.minutes }} Minutes
+      {{ countDownInfo.seconds }} Seconds
+    </div>
+    <div v-else class="text-4xl">
+      I encourage you to celebrate but it's your choice <div class="inline-block align-middle i-icon-ph-android-logo" />
+    </div>
   </div>
 </template>
