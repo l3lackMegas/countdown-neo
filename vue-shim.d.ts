@@ -1,6 +1,6 @@
-// For some weird reason, it is needed. 
-declare module "*.vue" {
-	import { defineComponent } from "vue";
-	const Component: ReturnType<typeof defineComponent>;
-	export default Component;
-  }
+// For some weird reason, it is needed.
+declare module '*.vue' {
+  import { defineComponent } from 'vue'
+  const Component: ReturnType<typeof defineComponent>
+  export default Component
+}
