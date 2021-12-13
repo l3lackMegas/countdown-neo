@@ -1,3 +1,4 @@
 <template>
   <NewYear />
+  <Reindeer />
 </template>
