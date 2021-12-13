@@ -11,7 +11,7 @@ import reindeer from '~/assets/reindeer.png'
   top: 20%;
   left: 50%;
   animation-name: reindeer-spin;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -19,10 +19,10 @@ import reindeer from '~/assets/reindeer.png'
 
 @keyframes reindeer-spin {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateY(100px);
+    transform: translateY(10px);
   }
 }
 </style>
