@@ -14,23 +14,27 @@ const countDownInfo = useCountdown(0, 1)
 </script>
 
 <template>
-  <h1 class="text-5xl font-sans font-bold" mb="4" text="blue-gray-800 dark:blue-gray-50">
-    <template v-if="isNewYearDay">
-      Happy New Year {{ currentYear }}
-    </template>
-    <template v-else>
-      New Year {{ currentYear + 1 }} Countdown
-    </template>
-  </h1>
-  <div>
-    <div v-if="!isNewYearDay" class="text-4xl">
-      {{ countDownInfo.days }} Days
-      {{ countDownInfo.hours }} Hours
-      {{ countDownInfo.minutes }} Minutes
-      {{ countDownInfo.seconds }} Seconds
-    </div>
-    <div v-else class="text-4xl">
-      I encourage you to celebrate but it's your choice <div class="inline-block align-middle i-icon-ph-android-logo" />
+  <div class="flex h-screen">
+    <div class="m-auto">
+      <h1 class="text-5xl font-sans font-bold" mb="4" text="blue-gray-800 dark:blue-gray-50">
+        <template v-if="isNewYearDay">
+          Happy New Year {{ currentYear }}
+        </template>
+        <template v-else>
+          New Year {{ currentYear + 1 }} Countdown
+        </template>
+      </h1>
+      <div>
+        <div v-if="!isNewYearDay" class="text-4xl">
+          {{ countDownInfo.days }} Days
+          {{ countDownInfo.hours }} Hours
+          {{ countDownInfo.minutes }} Minutes
+          {{ countDownInfo.seconds }} Seconds
+        </div>
+        <div v-else class="text-4xl">
+          I encourage you to celebrate but it's your choice <div class="inline-block align-middle i-icon-ph-android-logo" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
